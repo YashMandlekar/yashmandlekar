@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0a0f1c;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 12px 35px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background: #00aaff;
+  color: black;
+  box-shadow: 0 0 15px #00aaff;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 140px 60px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+}
+
+.hero-text span {
+  color: #00aaff;
+}
+
+.typing {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #a0cfff;
+  min-height: 28px;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn.outline {
+  border: 2px solid #00aaff;
+  color: #00aaff;
+}
+
+.btn.outline:hover {
+  background: #00aaff;
+  color: black;
+}
+
+.btn.solid {
+  background: #00aaff;
+  color: black;
+  border: 2px solid #00aaff;
+}
+
+.btn.solid:hover {
+  background: transparent;
+  color: #00aaff;
+}
+
+/* IMAGE */
+.hero-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-img img {
+  width: 300px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px #00aaff);
+}
+
+.about-under-img {
+  margin-top: 20px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.about-under-img h3 {
+  color: #00aaff;
+  margin-bottom: 8px;
+}
+
+.about-under-img p {
+  font-size: 14px;
+  color: #cfd8ff;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  width: 140px;
+  height: 140px;
+  background: #11182b;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.skill-card i {
+  font-size: 40px;
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px #00aaff;
+}
+
+/* PROJECTS */
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 320px;
+  padding: 35px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #11182b, #0c1222);
+  border: 1px solid rgba(0,170,255,0.4);
+  transition: 0.4s;
+}
+
+.project-card h3 {
+  color: #00aaff;
+  margin-bottom: 12px;
+}
+
+.project-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0,170,255,0.6);
+}
+
+/* CONTACT */
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact a {
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.skill-card i.fa-file-word {
+  color: #2b579a; /* MS Office blue */
+}
