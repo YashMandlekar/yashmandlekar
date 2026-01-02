@@ -114,7 +114,7 @@ body {
 
 .hero-img img {
   width: 300px;
-  animation: float 9s ease-in-out infinite;
+  animation: float 0s ease-in-out infinite;
   filter: drop-shadow(0 0 30px #00aaff);
 }
 
@@ -292,4 +292,5 @@ body {
   transform: translateY(-12px);
   box-shadow: 0 0 40px rgba(0, 200, 255, 0.45);
 }
+
 
