@@ -300,5 +300,101 @@ body {
   box-shadow: 0 0 40px rgba(0, 200, 255, 0.45);
 }
 
+/* =========================
+   MOBILE RESPONSIVE FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    top: 10px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 20px 60px;
+    gap: 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .typing {
+    font-size: 18px;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* IMAGE */
+  .hero-img img {
+    width: 220px;
+    animation: float 14s ease-in-out infinite;
+  }
+
+  .about-under-img {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  /* SKILLS */
+  .skills {
+    gap: 20px;
+  }
+
+  .skill-card {
+    width: 120px;
+    height: 120px;
+  }
+
+  .skill-card i {
+    font-size: 34px;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project-box,
+  .project-card {
+    width: 100%;
+    padding: 28px;
+  }
+
+  /* SECTIONS */
+  .section,
+  .projects-section {
+    padding: 80px 20px;
+  }
+
+  /* CONTACT */
+  .contact {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact a {
+    font-size: 16px;
+  }
+}
+
 
 
