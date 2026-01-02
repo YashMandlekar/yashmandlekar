@@ -173,31 +173,72 @@ body {
 }
 
 /* PROJECTS */
-.projects {
-  display: flex;
-  justify-content: center;
+
+.projects-section {
+  padding: 120px 80px;
+  background: #0a0f1c; /* same as body */
+}
+
+
+.projects-title {
+  text-align: center;
+  font-size: 32px;
+  color: #00c8ff;
+  margin-bottom: 70px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  margin-top: 50px;
-  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.project-card {
-  width: 320px;
-  padding: 35px;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #11182b, #0c1222);
-  border: 1px solid rgba(0,170,255,0.4);
-  transition: 0.4s;
+.project-box {
+  background: linear-gradient(145deg, #0b1225, #060b18);
+  border-radius: 25px;
+  padding: 40px;
+  border: 1px solid rgba(0, 200, 255, 0.35);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.project-card h3 {
-  color: #00aaff;
+.project-box h3 {
+  font-size: 22px;
+  color: white;
   margin-bottom: 12px;
 }
 
-.project-card:hover {
-  transform: translateY(-15px) scale(1.05);
-  box-shadow: 0 0 30px rgba(0,170,255,0.6);
+.project-box p {
+  font-size: 15px;
+  color: #cfd8ff;
+  line-height: 1.6;
+}
+
+/* SAME HOVER EFFECT AS IMAGE */
+.project-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 200, 255, 0.25),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.project-box:hover::before {
+  opacity: 1;
+}
+
+.project-box:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.45);
 }
 
 /* CONTACT */
@@ -224,3 +265,4 @@ body {
 .skill-card i.fa-file-word {
   color: #2b579a; /* MS Office blue */
 }
+
