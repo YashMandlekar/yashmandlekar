@@ -174,6 +174,7 @@ body {
 
 /* PROJECTS */
 
+/* PROJECTS SECTION (IMAGE STYLE) */
 .projects-section {
   padding: 120px 80px;
   background: #0a0f1c; /* same as body */
@@ -241,6 +242,7 @@ body {
   box-shadow: 0 0 40px rgba(0, 200, 255, 0.45);
 }
 
+
 /* CONTACT */
 .contact {
   display: flex;
@@ -265,4 +267,5 @@ body {
 .skill-card i.fa-file-word {
   color: #2b579a; /* MS Office blue */
 }
+
 
