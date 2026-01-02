@@ -216,10 +216,17 @@ body {
 
 /* ANIMATION */
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
+
 
 .skill-card i.fa-file-word {
   color: #2b579a; /* MS Office blue */
@@ -292,6 +299,7 @@ body {
   transform: translateY(-12px);
   box-shadow: 0 0 40px rgba(0, 200, 255, 0.45);
 }
+
 
 
 
