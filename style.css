@@ -371,6 +371,21 @@ body {
   transform: translateY(-12px);
   box-shadow: 0 0 40px rgba(0, 200, 255, 0.45);
 }
+/* SKILLS CARD LOGOS */
+.skill-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* CONTACT CARD LOGOS */
+.contact-card img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
 
 /* =========================
    MOBILE RESPONSIVE FIX
@@ -467,7 +482,6 @@ body {
     font-size: 16px;
   }
 }
-
 
 
 
