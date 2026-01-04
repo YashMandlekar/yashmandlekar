@@ -301,7 +301,7 @@ body {
 
 
 .skill-card i.fa-file-word {
-  color: #2b579a; /* MS Office blue */
+  color: #00aaff66; /* MS Office blue */
 }
 
 /* PROJECTS SECTION (IMAGE STYLE) */
@@ -482,6 +482,7 @@ body {
     font-size: 16px;
   }
 }
+
 
 
 
