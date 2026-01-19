@@ -1,155 +1,129 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yash Mandlekar | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yash Mandlekar | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#f9fbfc;color:#2b2b2b}
 
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+/* Sidebar – distinct background */
+.sidebar{position:fixed;left:0;top:12px;bottom:12px;width:270px;background:linear-gradient(180deg,#0ea5a4,#0b7f7e);border-radius:18px 18px 28px 28px;margin:12px;padding:26px;display:flex;flex-direction:column;gap:18px;color:#ffffff;box-shadow:0 15px 35px rgba(14,165,164,.35)}
+.logo-quote{font-weight:600;line-height:1.4;margin-bottom:10px}
+.nav-btn{display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:14px;text-decoration:none;color:#ffffff;font-weight:600;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);transition:.25s}
+.nav-btn:hover{background:rgba(0,0,0,.25)}
+.nav-btn:active{filter:brightness(.85)}
+.cv-btn{margin-top:auto;padding:14px 18px;border-radius:999px;text-align:center;background:#ffffff;color:#0ea5a4;font-weight:700;text-decoration:none;transition:.25s}
+.cv-btn:hover
+.cv-btn:active{filter:brightness(.85)}
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+/* Main */
+.main{margin-left:330px;padding:70px}
+.section{margin-bottom:110px}
+.hero{display:flex;align-items:center;gap:70px}
+.hero img{width:320px;filter:drop-shadow(0 0 16px rgba(14,165,164,.35))}
+
+h1{font-size:46px}
+h2{font-size:30px;color:#0ea5a4;margin-bottom:18px}
+p{font-size:17px;line-height:1.7;color:#555}
+
+.typing span{color:#0ea5a4;font-weight:700;border-right:3px solid #0ea5a4;padding-right:6px}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:24px}
+.skill{background:#fff;padding:22px;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.07);transition:.25s}
+.skill:hover{transform:translateY(-6px)}
+.skill img{width:52px;margin-bottom:10px}
+
+/* Projects – button has its own space */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.project{background:#fff;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.07);overflow:hidden;transition:.25s}
+.project:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.12)}
+.project-body{padding:26px}
+.project h3{color:#0ea5a4;margin-bottom:8px}
+.project-footer{padding:18px;border-top:1px solid #eef2f2;display:flex;justify-content:flex-end}
+.view-btn{opacity:0;pointer-events:none;padding:10px 18px;border-radius:999px;border:1px solid #0ea5a4;background:#ffffff;color:#0ea5a4;font-weight:700;text-decoration:none;transition:.25s}
+.project:hover .view-btn{opacity:1;pointer-events:auto}
+.view-btn:hover
+.view-btn:active{filter:brightness(.85)}
+
+/* Contact */
+.contact-box{background:#fff;padding:32px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.07)}
+.contacts{display:flex;gap:40px;flex-wrap:wrap;align-items:center}
+.contacts a{text-align:center;text-decoration:none;color:#555;font-weight:600;transition:.25s;min-width:90px}
+.contacts a:hover
+.contacts img{width:48px;height:48px;object-fit:contain;margin-bottom:10px;transition:.25s}
+.contacts a:hover img{transform:scale(1.1)} </style>
+
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<div class="sidebar">
+  <div class="logo-quote">“I Am Engineer — I can do anything”</div>
+  <a href="#about" class="nav-btn">About</a>
+  <a href="#skills" class="nav-btn">Skills</a>
+  <a href="#projects" class="nav-btn">Projects</a>
+  <a href="#contact" class="nav-btn">Let's Connect</a>
+  <a href="Yash_Mandlekar_CV.pdf" class="cv-btn" download>Download CV</a>
+</div>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
+<div class="main">
 
-    <!-- LEFT -->
-    <div class="hero-text">
-      <h1>Hi, I'm <span>Yash Mandlekar</span></h1>
-      <h2 class="typing"></h2>
+<section id="about" class="section hero">
+  <img src="yash.png" alt="Yash Mandlekar">
+  <div>
+    <h1 class="typing">Hello, I’m <span id="typeText"></span></h1>
+    <p>I'm Yash, a second-year engineering student passionate about becoming a successful engineer. I'm developing skills in web development and building real IoT solutions.</p>
+  </div>
+</section>
 
-      <div class="buttons">
-        <a href="#contact" class="btn outline">Contact Me</a>
-        <a href="Yash_Mandlekar_CV.pdf" class="btn solid" download>
-          <i class="fa-solid fa-download"></i> Download CV
-        </a>
-      </div>
-    </div>
+<section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><p>HTML</p></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><p>CSS</p></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><p>JavaScript</p></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"><p>C++</p></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><p>Python</p></div>
+    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><p>React</p></div>
+  </div>
+</section>
 
-    <!-- RIGHT -->
-    <div class="hero-img">
-      <img src="yash.png" alt="Yash Mandlekar">
-
-      <div class="about-under-img">
-        <h3>About Me</h3>
-        <h4>
-          I'm Yash, a second-year engineering student passionate about becoming a successful engineer.
-          I'm developing skills in web development and building real IoT solutions.
-        </h4>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <h2 class="projects-title">Skills</h2>
-
-      <div class="skills">
-
-      <div class="skill-card">
-       <i class="fa-solid fa-file-word"></i>
-       <p>MS Office</p>
-      </div>
-
-
-      <div class="skill-card">
-        <i class="fa-solid fa-c"></i>
-        <p>C / C++</p>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-brands fa-html5"></i>
-        <p>HTML</p>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-brands fa-css3-alt"></i>
-        <p>CSS</p>
-      </div>
-
-      <div class="skill-card">
-        <i class="fa-brands fa-js"></i>
-        <p>JavaScript</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="projects-section">
-  <h2 class="projects-title">Projects</h2>
-
+<section id="projects" class="section">
+  <h2>Projects</h2>
   <div class="projects-grid">
-
-    <div class="project-box">
-      <h3>Smart Plant Monitoring</h3>
-      <p>IoT system using Blynk to monitor plant health.</p>
-    </div>
-
-    <div class="project-box">
-      <h3>Auto Door Opener</h3>
-      <p>Sensor-based system that opens doors automatically.</p>
-    </div>
-
-    <div class="project-box">
-      <h3>Web Projects</h3>
-      <p>Responsive and interactive websites built during learning phase.</p>
-    </div>
-
-    <div class="project-box">
-      <h3>Footstep Energy Generator</h3>
-      <p>Generates electricity using piezoelectric sensors.</p>
-    </div>
-
+    <div class="project"><div class="project-body"><h3>Smart Plant Monitoring</h3><p>IoT system using Blynk to monitor plant health.</p></div><div class="project-footer"><a class="view-btn" href="https://en.wikipedia.org/wiki/Internet_of_things" target="_blank">View Details</a></div></div>
+    <div class="project"><div class="project-body"><h3>Auto Door Opener</h3><p>Sensor-based system that opens doors automatically.</p></div><div class="project-footer"><a class="view-btn" href="https://en.wikipedia.org/wiki/Automatic_door" target="_blank">View Details</a></div></div>
+    <div class="project"><div class="project-body"><h3>Web Projects</h3><p>Responsive and interactive websites built during learning phase.</p></div><div class="project-footer"><a class="view-btn" href="https://en.wikipedia.org/wiki/Responsive_web_design" target="_blank">View Details</a></div></div>
+    <div class="project"><div class="project-body"><h3>Footstep Energy Generator</h3><p>Generates electricity using piezoelectric sensors.</p></div><div class="project-footer"><a class="view-btn" href="https://en.wikipedia.org/wiki/Piezoelectricity" target="_blank">View Details</a></div></div>
   </div>
 </section>
 
-
-  <!-- CONTACT -->
- <section id="contact" class="contact-section">
-  <h2 class="contact-title">Let’s Connect</h2>
-  <p class="contact-subtitle">
-    Feel free to reach out for projects, collaboration, or just a chat.
-  </p>
-
-  <div class="contact-cards">
-
-    <a href="mailto:mandlekarvansh@gmail.com" class="contact-card">
-      <i class="fa-solid fa-envelope"></i>
-      <span>Email</span>
-    </a>
-
-    <a href="https://github.com/YashMandlekar" target="_blank" class="contact-card">
-      <i class="fa-brands fa-github"></i>
-      <span>GitHub</span>
-    </a>
-
-    <a href="https://www.linkedin.com/in/yash-mandlekar-39a112343/" target="_blank" class="contact-card">
-      <i class="fa-brands fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-
-   <a href="https://www.instagram.com/yash____21/" target="_blank" class="contact-card">
-      <i class="fa-brands fa-instagram"></i>
-      <span>Instagram</span>
-    </a>
-
+<section id="contact" class="section">
+  <h2>Let's Connect</h2>
+  <p>Feel free to reach out for projects, collaboration, or just a chat.</p>
+  <div class="contact-box">
+    <div class="contacts">
+      <a href="mailto:mandlekarvansh@gmail.com"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email">Email</a>
+      <a href="https://github.com/yashmandlekar" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/in/yash-mandlekar-39a112343/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">LinkedIn</a>
+      <a href="https://www.instagram.com/yash____21/" target="_blank"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">Instagram</a>
+    </div>
   </div>
 </section>
+
+</div>
+
+<script>
+const text="Yash Mandlekar";let i=0;let forward=true;const el=document.getElementById("typeText");
+function typeLoop(){ if(forward){ if(i<text.length){ el.textContent+=text.charAt(i++); } else { forward=false; setTimeout(()=>{},800);} }
+else{ if(i>0){ el.textContent=el.textContent.slice(0,-1); i--; } else { forward=true; } }
+setTimeout(typeLoop,110);} typeLoop();
+</script>
 
 </body>
 </html>
-
+`
